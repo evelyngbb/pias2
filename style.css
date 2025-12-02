@@ -1,0 +1,383 @@
+
+:root {
+    --primary-color: #d460eb; /* Fundo do container principal */
+    --secondary-color: #fbfbfc; /* para textos e cabeçalhos */
+    --accent-color: #ff00ff; 
+    --soft-purple: #9370DB; 
+    --text-color: #333; 
+    --light-text: #fff;
+    --category-bg: #e6e6fa; /* (fundo de hover do menu) */
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif; /* Nova Fonte: Verdana */
+    background-color:#fff;
+}
+
+/* Fundo com as ondas (Azul/Roxo Suave) */
+.background-container {
+    background: linear-gradient(180deg, #6495ED 0%, #9370DB 100%); /* FUNDO */
+    padding: 30px 0;
+    min-height: 100vh; /* define altura e se encaixa em qualquer tela;responsivo */
+    display: flex;
+    justify-content: center;
+}
+
+/* Container principal do site */
+.site-container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* faz efeito de sombra */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Cabeçalho e Navegação (NavBar) --- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.logo-image { 
+    width: 40px; 
+    height: auto;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-principal a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.menu-principal a:hover{
+    color: var(--accent-color) /* muda a cor das palavras do nav-bar */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-button {
+    color: var(--light-text);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* --- Conteúdo Principal (Layout Flexível) --- */
+
+.content-area {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap; 
+}
+
+/* --- Menu Lateral de Categorias --- */
+
+.categories-menu {
+    width: 250px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-right: 20px;
+    min-height: 500px;
+}
+
+.categories-title {
+    font-size: 14px;
+    color: var(--soft-purple);
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.categories-menu ul {
+    list-style: none;
+    padding: 0; /* distanciamento da borda  */
+    margin: 0; /* espaço entre as palavras */
+}
+
+.categories-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.categories-menu a {
+    flex-grow: 1;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.categories-menu a:hover {
+    background-color: var(--category-bg);
+}
+
+/* --- Grid de Livros --- */
+
+.book-grid, .about-content {
+    flex-grow: 1;
+    min-width: 0; 
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+
+.book-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.box-img {
+    max-width: 150px; 
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.box-img:hover {
+  transform: scale(1.05);
+}
+
+.titulo{
+    font-size: 14px;
+    font-weight: bold; /* peso da fonte: negrito */
+    color: #6495ED;
+    margin: 10px;
+    text-align: left;
+}
+
+.preço{
+    font-size: 16px;
+    color: #9370DB;
+    font-weight: bold;
+    margin: 10px;
+    text-align: left;
+}
+
+.sinopse-button {
+  background-color: #9370DB;
+  color: purple;
+  border-radius: 15px;
+  padding: 10px;
+  cursor: pointer; /* o que faz a mao de click quando passa em cima */
+  font-size: 14px;
+  font-weight: bold; /* deixa a letra mais grossa;negrito */
+}
+
+a{
+    text-decoration: none;
+}
+
+/* --- Estilos do Formulário de Cadastro/Login (login.html) --- */
+
+.login-box {
+    background-color: #f8ecf4;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin: 50px auto 0 auto; 
+}
+
+.login-box h2 {
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #db10c0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.login-box .buy-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+.login-box p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #9b0404;
+}
+
+.login-box p a {
+    color: var(--soft-purple); /* Link de login em Roxo Suave */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-content h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color); /* Linha divisória em Amarelo Ouro */
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.about-content p {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+
+
+/* Página de detalhes sinopse*/
+.details-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #e049ee;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(235, 102, 247, 0.856);
+  
+}
+
+.voltar {
+  text-decoration: none;
+  color: #0c0c0c;
+  font-weight: bold;
+}
+
+.sinopse-detalhe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.box-detalhe-img {
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(15, 15, 15, 0.856);
+}
+
+.box-detalhe-img:hover{
+  transform: scale(1.02);
+}
+
+.texto-sinopse {
+  flex: 1;
+}
+
+.livros-lista {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.livros-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.livros-grid img {
+  width: 100px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.sobrenós{
+     background-color: #f4f4f4;
+    color: #0e0d0d;
+    font-size: 20px;
+    background: #d460eb;;
+    width: 85%;
+    margin: 0 auto;
+}
+.sobrenós img {
+    max-width: 25%;
+    height: auto;
+    display: block;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+
+.produtos{
+    display: flex;
+}
+
+
+

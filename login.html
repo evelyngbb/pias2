@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onli Book Livravria Virtual - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="site-container">
+            <header class="navbar">
+                <div class="logo">
+                    <img src="imagens/logo.png" alt="logo" class="logo-image">
+                    <span>Onli Book<br>Livraria Virtual</span>
+                </div>
+                <nav class="menu-principal">
+                    <a href="index.html">Inicial</a>
+                    <a href="index.html">Produtos</a>
+                    <a href="sobrenós.html">Sobre nós</a>
+                    <a href="login.html" class="active">Login</a> <div class="search-box">
+                        <input type="text" placeholder="Search">
+                        <button class="search-button">Q</button>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="content-area">
+                <div class="login-box">
+                    <h2>Crie sua conta no Onli Book</h2>
+                    
+                    <form action="#"> <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="senha">Criar Senha:</label>
+                            <input type="password" id="senha" name="senha" required>
+                        </div>
+                        <button type="submit" class="buy-button">Cadastrar</button>
+                    </form>
+                    
+                    <p>Já tem uma conta? <a href="#">Faça Login aqui</a></p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
