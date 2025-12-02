@@ -216,12 +216,13 @@ body {
 
 .sinopse-button {
   background-color: #9370DB;
-  color: purple;
+  color: rgba(255, 255, 255, 0.87);
   border-radius: 15px;
   padding: 10px;
   cursor: pointer; /* o que faz a mao de click quando passa em cima */
   font-size: 14px;
   font-weight: bold; /* deixa a letra mais grossa;negrito */
+  margin-left: 70%;
 }
 
 a{
@@ -314,7 +315,7 @@ a{
 
 .voltar {
   text-decoration: none;
-  color: #0c0c0c;
+  color: white;
   font-weight: bold;
 }
 
@@ -330,6 +331,7 @@ a{
   width: 280px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(15, 15, 15, 0.856);
+  margin-top: 30px;
 }
 
 .box-detalhe-img:hover{
@@ -338,11 +340,14 @@ a{
 
 .texto-sinopse {
   flex: 1;
+  color: white;
+  font-size: 22px;
 }
 
 .livros-lista {
   margin-top: 40px;
   text-align: center;
+  color: white;
 }
 
 .livros-grid {
