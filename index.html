@@ -19,9 +19,10 @@
                     <a href="produtos.html">Produtos</a> 
                     <a href="sobrenós.html">Sobre nós</a>
                     <a href="login.html">Login</a> <div class="search-box">
-                        <input type="text" placeholder="Search">
-                        <button class="search-button">Q</button>
-
+                      <form id="form-busca" class="search-form">
+    <input type="search" id="input-busca" name="q" placeholder="Pesquisar categoria " required>
+    <button type="submit"></button> 
+</form>
                         
                     </div>
                 </nav>
@@ -32,9 +33,9 @@
                     <h3 class="categories-title">CATEGORIAS</h3>
                     <ul>
                         <li><a href="#">Ficção</a></li>
-                        <li><a href="#">Fantasia</a></li>
-                        <li><a href="#">Romance</a></li>
-                        <li><a href="#">Suspense</a></li>
+                        <li><a href="fantasia.html">Fantasia</a></li>
+                        <li><a href="romance.html">Romance</a></li>
+                        <li><a href="suspense.html">Suspense</a></li>
                         <li><a href="#">Poesia</a></li>
                         <li><a href="#">Infantil</a></li>
                         <li><a href="#">Autoajuda</a></li>
@@ -118,5 +119,31 @@
             </main>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+<footer class="rodape">
+    <div class="rodape-content">
+        
+        <div class="rodape-secao info-geral">
+            <h3>Onli-Book Livraria Virtual</h3>
+            <p>Sua plataforma de leitura no coração do Paraná.</p>
+            <p class="copyright">&copy; 2025 Onli-Book. Todos os direitos reservados.</p>
+        </div>
+        <div class="rodape-secao social-logos">
+            
+            <h3>Conecte-se</h3>
+            
+            <a href="URL_DO_SEU_INSTAGRAM" target="_blank" class="social-link">
+                <img src="imagens/insta.jpg" alt="Instagram" class="icone-social">
+                <span>@onlibook_leitura</span>
+            </a>
+            
+            <div class="logos-institucionais">
+                <p>Apoio e Institucional:</p>
+                <img src="imagens/brasao_cm.png" alt="Logo da Livraria" class="logo-pequena">
+                <img src="imagens/brasao_pr.svg" alt="Governo do Paraná" class="logo-pequena">
+            </div>
+        </div>
+    </div>
+</footer>

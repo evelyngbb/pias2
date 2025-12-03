@@ -42,30 +42,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #ddd;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    font-size: 10px;
+    font-size: 25px;
     line-height: 1.2;
     color: var(--secondary-color);
     font-weight: bold;
 }
 
 .logo-image { 
-    width: 40px; 
+    width: 100px; 
     height: auto;
-    margin-right: 10px;
+    margin-right: 20px;
     border-radius: 5px;
 }
 
 .menu-principal {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    font-size: 20px;
 }
 
 .menu-principal a {
@@ -365,7 +366,7 @@ a{
 
 .sobrenós{
      background-color: #f4f4f4;
-    color: #0e0d0d;
+    color: #ffffff;
     font-size: 20px;
     background: #d460eb;;
     width: 85%;
@@ -386,3 +387,109 @@ a{
 
 
 
+/* Contêiner principal do rodapé */
+.rodape {
+    /* Cor de fundo elegante e borda de destaque */
+    background-color: #d460eb; 
+    color: #ecf0f1; /* Texto cinza claro/branco */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-top: 5px solid  #9370DB ; /* Linha de destaque */
+}
+
+.rodape-content {
+    display: flex;
+    justify-content: space-between; 
+    max-width: 1000px; 
+    margin: 0 auto;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    gap: 30px; 
+}
+/* Estilo para cada seção/coluna do rodapé */
+.rodape-secao {
+    flex-basis: 20%; /* Cada seção ocupa cerca de 30% da largura */
+}
+
+.rodape-secao h3 {
+    color: #f3f2f2; /* Título em azul de destaque */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 2px solid rgba(220, 183, 231, 0.3); /* Linha sutil de separação */
+    padding-bottom: 5px;
+}
+
+/* Links de Navegação */
+.rodape-secao ul {
+    list-style: none;
+    padding: 0;
+}
+.rodape-secao ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    line-height: 2; 
+    transition: color 0.3s;
+}
+.rodape-secao ul li a:hover {
+    color: #e74c3c; /* Efeito hover em vermelho */
+}
+
+/* Links Sociais e Ícones */
+.social-link {
+    display: flex;
+    align-items: center;
+    color: #ecf0f1;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #e74c3c; /* Efeito hover no link social */
+}
+
+.icone-social {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Logos pequenas (Paraná e Livraria) */
+.logos-institucionais {
+    margin-top: 20px;
+}
+
+.logos-institucionais p {
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin-bottom: 10px;
+}
+
+.logo-pequena {
+    max-width: 80px; /* Tamanho controlado para as logos */
+    height: auto;
+    margin-right: 15px;
+    opacity: 0.8; 
+    transition: opacity 0.3s;
+}
+
+.logo-pequena:hover {
+    opacity: 1;
+}
+
+/* --- Responsividade (Para Celulares e Tablets) --- */
+@media (max-width: 768px) {
+    .rodape-content {
+        flex-direction: column; /* Empilha as seções verticalmente */
+        text-align: center;
+    }
+    .rodape-secao {
+        flex-basis: 100%;
+        margin-bottom: 25px;
+    }
+    /* Centraliza os elementos que estavam alinhados à esquerda */
+    .social-link {
+        justify-content: center;
+    }
+    .rodape-secao h3 {
+        display: inline-block; /* Ajuda a centralizar o título e a linha */
+    }
+}
