@@ -9,12 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); 
 
             // Pega o termo digitado e coloca em minúsculas
-            const termoBusca = ;
+            const termoBusca = inputBusca.value.toLowerCase().trim(); // AQUI!
             
             if (termoBusca === '') return; // Se vazio, não faz nada
 
             // --- Lógica de Redirecionamento de Categoria ---
-            // Verifica se o termo digitado é uma categoria válida
+            // Verifica se o termo digitado é uma categoria válida.
+            // O usuário será redirecionado se digitar algo que contenha 'fantasia', 'romance' ou 'suspense'.
             if (termoBusca.includes('fantasia')) {
                 window.location.href = 'fantasia.html';
                 return; 
@@ -27,12 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 window.location.href = 'suspense.html';
                 return;
             }
-            // Você pode adicionar mais categorias aqui (ex: ficcao, poesia)
 
             // --- Lógica de Filtragem de Livros na Página Atual ---
             
-            // Só executa a filtragem se o usuário não foi redirecionado
-            const cardsLivro = document.querySelectorAll('.card-livro');
+            // Só executa a filtragem se o usuário NÃO foi redirecionado.
+            const cardsLivro = document.querySelectorAll('book-card'); // AQUI!
             let resultadosEncontrados = false;
             
             cardsLivro.forEach(card => {
